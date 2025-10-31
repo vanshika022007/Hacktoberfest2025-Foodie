@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback | Foodie 🍽️</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="../imgs/favicon.png" type="image/png" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/feedback.css" />
+  <link rel="stylesheet" href="../css/cursor.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>We Value Your <span class="highlight">Feedback 💬</span></h1>
+    <p>Help us serve you better by sharing your thoughts and experience.</p>
+  </section>
+
+  <!-- Feedback Cards Section -->
+  <section class="feedback-container">
+    <div class="feedback-card">
+      <h2>🌐 Website Feedback</h2>
+      <p>Tell us what you think about our website layout, content, and navigation.</p>
+    </div>
+
+    <div class="feedback-card">
+      <h2>📱 App Feedback</h2>
+      <p>Share your experience using our mobile application — what worked, what didn’t!</p>
+    </div>
+
+    <div class="feedback-card">
+      <h2>🚚 Service Feedback</h2>
+      <p>Let us know how we can improve delivery speed, food quality, or customer support.</p>
+    </div>
+  </section>
+
+  <!-- Feedback Form Section -->
+  <section class="form-section">
+    <h2>📝 Share Your Thoughts</h2>
+    <form id="feedback-form" action="#" method="post">
+      <label for="name">Name <span>*</span></label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required minlength="3" maxlength="50" />
+
+      <label for="email">Email <span>*</span></label>
+      <input type="email" id="email" name="email" placeholder="yourname@example.com" required />
+
+      <label for="category">Feedback Type <span>*</span></label>
+      <select id="category" name="category" required>
+        <option value="">Select an option</option>
+        <option value="website">Website</option>
+        <option value="app">App</option>
+        <option value="service">Service</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="message">Your Feedback <span>*</span></label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your feedback here..." required></textarea>
+
+      <button type="submit" class="btn-submit">Submit Feedback</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>🍕 <strong>Foodie</strong> — Built with ❤️ for Hacktoberfest 2025. Licensed under <a href="../LICENSE">MIT</a>.</p>
+    <p>&copy; 2025 Foodie. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="../js/cursor.js"></script>
+  <script>
+    // Simple feedback form handler
+    document.getElementById("feedback-form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("🎉 Thank you for your feedback! We truly appreciate your time.");
+      e.target.reset();
+    });
+  </script>
+</body>
+
+</html>
