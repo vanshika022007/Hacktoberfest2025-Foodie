@@ -513,7 +513,7 @@ p {
 
 .cta-btn.primary {
     background: black;
-    color: var(--pure-white);
+    color: white;
 }
 
 .cta-btn.primary:hover {
