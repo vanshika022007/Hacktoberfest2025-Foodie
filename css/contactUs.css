@@ -1,8 +1,8 @@
 /* Hero Section */
 .hero {
     background: var(--bg-secondary);
-    padding: 60px 40px;
-    padding-top: 150px;
+    padding-top: 30px;
+    padding-bottom: 50px;
     text-align: center;
 }
 
@@ -32,7 +32,8 @@
     gap: 3rem;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 80px 40px;
+    padding-top: 48px;
+    padding-bottom: 36px;
     text-align: center;
 }
 
@@ -138,7 +139,8 @@ select:focus {
 
 /* FAQ */
 .faq-section {
-    padding: 60px 40px;
+    padding-top: 40px;
+    padding-bottom: 32px;
     background: linear-gradient(180deg, var(--bg-primary) 0%, rgba(244, 180, 0, 0.04) 100%);
 }
 
@@ -255,6 +257,11 @@ select:focus {
   opacity: 1;
 }
 
+/* Only affect the footer on the contact page (footer id="contacts") */
+footer#contacts .footer-container {
+    margin-top: 0rem; /* ~40px instead of global 10rem */
+}
+
 
 @media (max-width: 900px) {
     .faq-grid {
@@ -290,3 +297,9 @@ select:focus {
         font-size: 32px;
     }
 }
+
+
+
+
+
+
