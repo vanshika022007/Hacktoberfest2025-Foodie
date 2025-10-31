@@ -2,19 +2,23 @@
    CSS CUSTOM PROPERTIES
    =========================== */
 :root {
-    /* Colors - Light Mode */
-    --text-primary: #1a1a1a;
-    --text-secondary: #4a5568;
-    --gold-finger: #d4af37;
-    --bg-primary: #ffffff;
-    --bg-secondary: #f8f9fa;
-    --bg-accent: #f0f2f5;
-    --shadow-strong: rgba(0, 0, 0, 0.1);
-    --shadow-medium: rgba(0, 0, 0, 0.05);
-    --lead: #1a1a1a;
-    --pure-white: #ffffff;
-    --border-color: var(--gold-finger);
-    
+    /* Light theme (default) */
+    --lead: #212121;
+    --gold-finger: #F2BD12;
+    --eye-ball: #FFFDF7;
+    --hint-yellow: #FCF1CC;
+    --pure-while: #FFF;
+    --text-primary: #212121;
+    --text-secondary: #666666;
+    --bg-primary: #FFFDF7;
+    --bg-secondary: #FFF;
+    --bg-accent: #FCF1CC;
+    --border-color: #E0E0E0;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --shadow-strong: rgba(0, 0, 0, 0.2);
+    --navbar-bg: transparent;
+    --logo-color: #111;
+
     /* Spacing Scale */
     --space-xs: 0.5rem;
     --space-sm: 1rem;
@@ -22,17 +26,17 @@
     --space-lg: 4rem;
     --space-xl: 6rem;
     --space-2xl: 8rem;
-    
+
     /* Border Radius */
     --radius-sm: 1rem;
     --radius-md: 2rem;
     --radius-lg: 3rem;
-    
+
     /* Transitions */
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
     --transition-slow: 0.5s ease;
-    
+
     /* Typography Scale */
     --text-xs: 1.1rem;
     --text-sm: 1.2rem;
@@ -44,22 +48,29 @@
     --text-4xl: 5.6vw;
 }
 
-/* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --text-primary: #f7fafc;
-        --text-secondary: #cbd5e0;
-        --bg-primary: #1a202c;
-        --bg-secondary: #2d3748;
-        --bg-accent: #374151;
-        --shadow-strong: rgba(0, 0, 0, 0.3);
-        --shadow-medium: rgba(0, 0, 0, 0.2);
-        --lead: #f7fafc;
-    }
+[data-theme="dark"] {
+    /* Dark theme */
+    --lead: #E0E0E0;
+    --gold-finger: #F2BD12;
+    --eye-ball: #1A1A1A;
+    --hint-yellow: #2D2D2D;
+    --pure-while: #2D2D2D;
+    --text-primary: #E0E0E0;
+    --text-secondary: #B0B0B0;
+    --bg-primary: #1A1A1A;
+    --bg-secondary: #2D2D2D;
+    --bg-accent: #2D2D2D;
+    --border-color: #404040;
+    --shadow: rgba(0, 0, 0, 0.3);
+    --shadow-strong: rgba(0, 0, 0, 0.5);
+    --navbar-bg: transparent;
+    --logo-color: #fff;
 }
+
 
 /* Reduced Motion Support */
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
@@ -617,6 +628,7 @@ p {
 
 /* High Contrast Mode Support */
 @media (prefers-contrast: high) {
+
     .mission-card,
     .stat-card,
     .feature-card,
@@ -632,6 +644,7 @@ p {
 
 /* Print Styles */
 @media print {
+
     .cta-section,
     .cta-buttons {
         display: none;
